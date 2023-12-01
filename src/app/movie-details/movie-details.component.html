@@ -1,0 +1,29 @@
+<html>
+<app-go-home-button></app-go-home-button>
+<section class="section">
+  <div class="movie-details-container">
+    <div class="img" *ngIf="movie">
+      <img [src]="movie.urlToImage" alt="{{ movie.title }}" class="movie-details-image" />
+    </div>
+    <div class="movie-details-content">
+      <div *ngIf="movie">
+        <h2 class="movie-details-title">{{ movie.title }}</h2>
+        <p class="movie-details-description">{{ movie.description }}</p>
+        <p class="movie-details-rating">Rating: {{ movie.Rating }}</p>
+        <p class="movie-details-duration">Duration: {{ movie.Duration }}</p>
+        <p class="movie-details-genre">Genre: {{ movie.Genre }}</p>
+        <p class="movie-details-release-date">Released Date: {{ movie.ReleasedDate }}</p>
+        <button class="watchlist-button" (click)="addToWatchlist()">{{buttonText}}</button>
+
+      </div>
+    </div>
+  </div>
+  <h3>Trailer</h3>
+  <div class="movie-trailer">
+    <iframe width="1400" height="630" [src]="getVideoUrl()" title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+</section>
+
+</html>

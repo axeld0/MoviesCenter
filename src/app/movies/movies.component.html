@@ -1,0 +1,25 @@
+<body>
+    <div class="button-container">
+        <button class="watchlist-button" (click)="goToWatchlist()">
+            Go to Watchlist
+        </button>
+        <div class="filter-menu">
+            <label>Sort By:</label>
+            <select [(ngModel)]="selectedSortOption" (change)="sortMovies()">
+                <option value="releaseDate">Release Date</option>
+                <option value="title">Title</option>
+            </select>
+        </div>
+    </div>
+    <div class="movies-list">
+        <div *ngFor="let movie of moviesList" (click)="openMovieDetail(movie)">
+            <div *ngIf="movie.urlToImage">
+                    <div class="movie-content">
+                        <h2 class="movie-title">{{ movie.title }}</h2>
+                        <img class="movie-img" [src]="movie.urlToImage" />
+                        <p class="movie-year">{{movie.releaseDate}}</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>

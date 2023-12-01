@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    background-color: #1a0e4c;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    margin: -10px;
+    
+}
+
+.logo-container {
+    text-align: center;
+    
+}
+
+.logo-container img:hover {
+    cursor: pointer;
+}

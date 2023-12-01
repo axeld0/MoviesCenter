@@ -1,0 +1,12 @@
+<app-go-home-button></app-go-home-button>
+<section>
+    <div class="container">
+        <h2>My Watchlist</h2>
+        <div class="list">
+            <div *ngFor="let movie of watchlist" class="listlist">
+                <h4 (click)="goTo(movie.title)">{{movie.title}}</h4>
+                <button (click)="remove(movie)">Remove</button>
+            </div>
+        </div>
+    </div>
+</section>

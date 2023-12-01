@@ -1,0 +1,34 @@
+.container{
+    height: 70vh;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.listlist{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    
+    padding: 3rem 0;
+    border-bottom: 0.1rem solid grey;
+}
+h2{
+    font-size: x-large;
+    color: antiquewhite;
+}
+
+h4{
+    font-size: medium;
+    font-weight: 500;
+    color: antiquewhite;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    cursor: pointer;
+}
+button{
+    margin-left: 30rem;
+}
